@@ -3,60 +3,220 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trauma-Informed Graphic Design Institute</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Primary meta -->
+  <title>TIGD Institute — Trauma-Informed Graphic Design for Healthcare</title>
+  <meta name="description" content="The TIGD Institute advances Trauma-Informed Graphic Design (TIGD) as a field of research and practice, helping clinics, hospitals, and mission-driven organizations design patient-facing materials that respect cognitive load, emotional state, and the realities of seeking care." />
+  <meta name="keywords" content="trauma-informed graphic design, TIGD, healthcare design, patient-facing communication, design investment disparity, healthcare graphic design, trauma-informed design, patient experience, healthcare communication, cognitive load design" />
+  <meta name="author" content="Steve Brackenrich Jr." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tigdinstitute.org/" />
+
+  <!-- Open Graph (LinkedIn, Facebook, Bluesky, Mastodon) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TIGD Institute" />
+  <meta property="og:title" content="TIGD Institute — Trauma-Informed Graphic Design for Healthcare" />
+  <meta property="og:description" content="Advancing Trauma-Informed Graphic Design as a field of research and practice. Consulting and research for clinics, hospitals, and mission-driven organizations." />
+  <meta property="og:url" content="https://tigdinstitute.org/" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TIGD Institute — Trauma-Informed Graphic Design for Healthcare" />
+  <meta name="twitter:description" content="Advancing Trauma-Informed Graphic Design as a field of research and practice. Consulting and research for clinics, hospitals, and mission-driven organizations." />
+
+  <!-- Theme color for browser chrome -->
+  <meta name="theme-color" content="#faf6ef" />
+
+  <!-- Structured data: Organization schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TIGD Institute",
+    "alternateName": "Trauma-Informed Graphic Design Institute",
+    "url": "https://tigdinstitute.org/",
+    "description": "The TIGD Institute advances Trauma-Informed Graphic Design as a field of research and practice for healthcare environments.",
+    "founder": {
+      "@type": "Person",
+      "name": "Steve Brackenrich"
+    },
+    "knowsAbout": [
+      "Trauma-Informed Graphic Design",
+      "Design Investment Disparity",
+      "Healthcare Communication Design",
+      "Patient-Facing Visual Communication",
+      "Trauma-Informed Care"
+    ],
+    "areaServed": "Worldwide",
+    "email": "info@tigdinstitute.org"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --paper: #faf6ef;
+      --paper-warm: #f3ede0;
+      --ink: #1a2238;
+      --ink-soft: #4a5068;
+      --rule: #d9d0bd;
+      --accent-deep: #8e3f2c;
+
+      --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+      --sans: "Manrope", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      font-size: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--paper);
+      font-feature-settings: "kern", "liga", "calt";
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+    }
+
+    .card {
+      max-width: 38rem;
+      width: 100%;
+    }
+
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-variation-settings: "opsz" 60;
+      font-size: clamp(2rem, 4vw + 1rem, 3.25rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 2rem;
+      max-width: 18ch;
+    }
+
+    .prose {
+      font-size: 1.125rem;
+      line-height: 1.65;
+      color: var(--ink);
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+
+    .prose strong {
+      font-weight: 500;
+    }
+
+    .contact {
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: var(--ink-soft);
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 1.0625rem;
+      font-weight: 500;
+      color: var(--accent-deep);
+      text-decoration: none;
+      background-image: linear-gradient(to right, var(--accent-deep), var(--accent-deep));
+      background-size: 0 1px;
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      transition: background-size 250ms ease;
+    }
+
+    .contact-email:hover,
+    .contact-email:focus-visible {
+      background-size: 100% 1px;
+    }
+
+    .contact-email:focus-visible {
+      outline: 2px solid var(--accent-deep);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    footer {
+      padding: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+      text-align: center;
+      background: var(--paper-warm);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(0.5rem);
+      animation: fadeUp 700ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+    }
+    .reveal:nth-child(1) { animation-delay: 80ms; }
+    .reveal:nth-child(2) { animation-delay: 220ms; }
+    .reveal:nth-child(3) { animation-delay: 380ms; }
+    .reveal:nth-child(4) { animation-delay: 540ms; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
+
 <body>
-  <header class="hero">
-    <div class="wrapper">
-      <p class="eyebrow">TIGD Institute</p>
-      <h1>Trauma-Informed Graphic Design Consulting and Research</h1>
-      <p class="hero-text">Founded by Steve Brackenrich Jr. MFA, we partner with healthcare organizations to create patient-facing materials that prioritize cognitive load, emotional state, and the realities of seeking care.</p>
-      <a class="button" href="#contact">Get in Touch</a>
-    </div>
-  </header>
-
-  <main class="wrapper content">
-    <section id="about">
-      <h2>About Us</h2>
-      <p>The Trauma-Informed Graphic Design Institute is the consulting and research home for this work. It was founded by Steve Brackenrich, a designer and researcher whose career spans offset press production, healthcare communications, domestic violence advocacy design, and graduate teaching at Kent State University. His graduate research defined Trauma-Informed Graphic Design as a field designation and introduced the concept of design investment disparity to the literature. The institute partners with clinics, hospitals, and mission-driven organizations to design patient-facing materials that account for cognitive load, emotional state, and the realities of seeking care.</p>
-    </section>
-
-    <section id="programs">
-      <h2>Our Services</h2>
-      <div class="grid">
-        <article>
-          <h3>Consulting</h3>
-          <p>Expert guidance on trauma-informed design principles for healthcare communications and patient materials.</p>
-        </article>
-        <article>
-          <h3>Research</h3>
-          <p>Advancing the field of Trauma-Informed Graphic Design through scholarly work and practical applications.</p>
-        </article>
-        <article>
-          <h3>Partnerships</h3>
-          <p>Collaborating with clinics, hospitals, and mission-driven organizations to create impactful, empathetic visual communication systems that are effective for everyone.</p>
-        </article>
+  <main>
+    <article class="card">
+      <p class="eyebrow reveal">TIGD Institute</p>
+      <h1 class="reveal">Trauma-informed graphic design for healthcare.</h1>
+      <p class="prose reveal">The TIGD Institute advances <strong>Trauma-Informed Graphic Design</strong> as a field of research and practice. We help clinics, hospitals, and mission-driven organizations close the gap between their built environments and the patient-facing materials inside them. Founded by Steve Brackenrich Jr. on graduate research at Kent State University that defined the field and named the <strong>design investment disparity</strong> it addresses.</p>
+      <div class="contact reveal">
+        <p>For consulting inquiries, research partnerships, and speaking engagements:</p>
+        <a class="contact-email" href="mailto:info@tigdinstitute.org">info@tigdinstitute.org</a>
       </div>
-    </section>
-
-    <section id="mission">
-      <h2>Our Mission</h2>
-      <p>Our mission begins in support of healthcare. We empower healthcare organizations with trauma-informed visual communication design solutions that respect patient and staff lived experiences and improve care outcomes.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Ready to learn more? Reach out and let us connect you with programs, research, and partnership opportunities.</p>
-      <p>Email: <a href="mailto:info@tigdinstitute.org">info@tigdinstitute.org</a></p>
-    </section>
+    </article>
   </main>
 
   <footer>
-    <div class="wrapper footer-content">
-      <p>© 2026 Trauma-Informed Graphic Design Institute</p>
-      <p>Hosted with GitHub Pages by Trauma-INformed Graphic Design Institute.</p>
-    </div>
+    © 2026 Trauma-Informed Graphic Design Institute
   </footer>
 </body>
 </html>
