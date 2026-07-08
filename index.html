@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary meta -->
-  <title>Trauma-Informed Graphic Design Institute, LLC — Trauma-Informed Graphic Design for Healthcare</title>
-  <meta name="description" content="The Trauma-Informed Graphic Design Institute, LLC advances Trauma-Informed Graphic Design as a field of research and practice, helping clinics, hospitals, and mission-driven organizations design patient-facing materials that respect cognitive load, emotional state, and the realities of seeking care." />
+  <title>TIGD Institute | Trauma-Informed Graphic Design for Research, Practice, and Institutional Communication</title>
+  <meta name="description" content="TIGD Institute advances trauma-informed graphic design as a named academic and practice-based discipline focused on clear, accessible, and emotionally considerate visual communication." />
   <meta name="keywords" content="trauma-informed graphic design, healthcare design, patient-facing communication, design investment disparity, healthcare graphic design, trauma-informed design, patient experience, healthcare communication, cognitive load design" />
   <meta name="author" content="Steve Brackenrich Jr." />
   <meta name="robots" content="index, follow" />
@@ -26,7 +26,7 @@
   <meta name="twitter:description" content="Advancing Trauma-Informed Graphic Design as a field of research and practice. Consulting and research for clinics, hospitals, and mission-driven organizations." />
 
   <!-- Theme color for browser chrome -->
-  <meta name="theme-color" content="#faf6ef" />
+  <meta name="theme-color" content="#f3ece7" />
 
   <!-- Structured data: Organization schema -->
   <script type="application/ld+json">
@@ -56,16 +56,25 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --paper: #faf6ef;
-      --paper-warm: #f3ede0;
-      --ink: #1a2238;
-      --ink-soft: #4a5068;
-      --rule: #d9d0bd;
-      --accent-deep: #8e3f2c;
+      --paper: #f3ece7;
+      --paper-warm: #e8dfd7;
+      --surface: #fbf7f2;
+      --surface-strong: #efe5db;
+      --ink: #24313d;
+      --ink-soft: #4d5764;
+      --rule: #c8b8a8;
+      --accent-deep: #5f7280;
+      --accent-soft: #6e8793;
+      --accent-hover: #435766;
+      --jewel-blue: #768c99;
+      --jewel-plum: #7b6e79;
+      --jewel-teal: #6e8b8a;
+      --aqua-taupe-glow: radial-gradient(circle at 30% 30%, rgba(152, 177, 173, 0.72), rgba(128, 148, 151, 0.18) 58%, rgba(108, 125, 129, 0.05) 100%);
+      --blue-tint-glow: radial-gradient(circle at 30% 30%, rgba(119, 149, 168, 0.78), rgba(93, 117, 136, 0.2) 58%, rgba(74, 95, 111, 0.06) 100%);
 
       --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
       --sans: "Manrope", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
@@ -82,11 +91,29 @@
     body {
       font-family: var(--sans);
       color: var(--ink);
-      background: var(--paper);
+      background: linear-gradient(135deg, var(--paper) 0%, var(--paper-warm) 100%);
       font-feature-settings: "kern", "liga", "calt";
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+      isolation: isolate;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      background:
+        radial-gradient(circle at top left, rgba(152, 177, 173, 0.24), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(128, 148, 151, 0.16), transparent 28%),
+        linear-gradient(90deg, rgba(36, 49, 61, 0.025) 1px, transparent 1px),
+        linear-gradient(rgba(36, 49, 61, 0.025) 1px, transparent 1px);
+      background-size: auto, auto, 24px 24px, 24px 24px;
+      opacity: 0.35;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -97,17 +124,129 @@
       }
     }
 
+    .background-dots {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: visible;
+    }
+
+    .bg-dot {
+      position: absolute;
+      display: block;
+      width: 1.45rem;
+      height: 1.45rem;
+      border-radius: 50%;
+      background: var(--blue-tint-glow);
+      opacity: 0.82;
+      filter: blur(0.15px);
+    }
+
+    .bg-dot-1 { top: 6%; left: 2%; width: 1.6rem; height: 1.6rem; opacity: 0.36; }
+    .bg-dot-2 { top: 14%; right: 3%; width: 2.1rem; height: 2.1rem; opacity: 0.29; }
+    .bg-dot-3 { top: 24%; left: 12%; width: 1.4rem; height: 1.4rem; opacity: 0.64; }
+    .bg-dot-4 { top: 36%; right: 17%; width: 1.6rem; height: 1.6rem; opacity: 0.66; }
+    .bg-dot-5 { top: 46%; left: 4%; width: 1.9rem; height: 1.9rem; opacity: 0.5; }
+    .bg-dot-6 { top: 57%; right: 8%; width: 1.5rem; height: 1.5rem; opacity: 0.62; }
+    .bg-dot-7 { top: 68%; left: 14%; width: 1.55rem; height: 1.55rem; opacity: 0.46; }
+    .bg-dot-8 { top: 78%; right: 22%; width: 1.2rem; height: 1.2rem; opacity: 0.54; }
+    .bg-dot-9 { top: 82%; left: 2%; width: 12rem; height: 12rem; opacity: 0.38; }
+    .bg-dot-10 { top: 91%; right: 5%; width: 7rem; height: 7rem; opacity: 0.6; }
+    .bg-dot-11 { top: 88%; left: 34%; width: 5.5rem; height: 5.5rem; opacity: 0.56; }
+    .bg-dot-12 { top: 39%; right: 2%; width: 14rem; height: 14rem; opacity: 0.32; }
+    .bg-dot-13 { top: 26%; left: 2%; width: 13rem; height: 13rem; opacity: 0.34; }
+    .bg-dot-14 { top: 71%; right: 24%; width: 9rem; height: 9rem; opacity: 0.4; }
+    .bg-dot-15 { top: 53%; left: 24%; width: 8rem; height: 8rem; opacity: 0.48; }
+    .bg-dot-16 { top: 11%; left: 28%; width: 6rem; height: 6rem; opacity: 0.58; }
+    .bg-dot-17 { top: 18%; left: 58%; width: 11rem; height: 11rem; opacity: 0.34; }
+    .bg-dot-18 { top: 64%; right: 33%; width: 10rem; height: 10rem; opacity: 0.3; }
+    .bg-dot-19 { top: 74%; left: 48%; width: 9rem; height: 9rem; opacity: 0.36; }
+    .bg-dot-20 {
+      top: 1%;
+      left: 44%;
+      width: 12rem;
+      height: 12rem;
+      opacity: 0.24;
+      z-index: -1;
+    }
+    .bg-dot-21 {
+      top: 8%;
+      right: 12%;
+      transform: translateX(50px);
+      width: 500px;
+      height: 500px;
+      opacity: 0.16;
+      z-index: -1;
+    }
+    .bg-dot-22 {
+      bottom: 4%;
+      left: 8%;
+      width: 500px;
+      height: 500px;
+      opacity: 0.14;
+      z-index: -1;
+    }
+
     main {
       flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 4rem 1.5rem;
+      position: relative;
+      z-index: 1;
     }
 
     .card {
-      max-width: 38rem;
+      z-index: 2;
+    }
+
+    .card {
+      max-width: 44rem;
       width: 100%;
+      position: relative;
+      padding: clamp(1.25rem, 2vw, 2rem);
+      background: rgba(251, 247, 242, 0.84);
+      border: 1px solid rgba(200, 184, 168, 0.45);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(36, 49, 61, 0.07);
+      backdrop-filter: blur(2px);
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -2.5rem;
+      right: -3rem;
+      width: 14rem;
+      height: 14rem;
+      border-radius: 50%;
+      background: var(--aqua-taupe-glow);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-shape {
+      position: absolute;
+      top: 9rem;
+      left: -1rem;
+      width: 36rem;
+      height: 36rem;
+      border-radius: 42% 58% 54% 46% / 49% 40% 60% 51%;
+      background: radial-gradient(circle at 30% 30%, rgba(167, 190, 187, 0.48), rgba(139, 159, 162, 0.12) 58%, rgba(120, 137, 141, 0.03) 100%);
+      filter: blur(0.2px);
+      opacity: 0.95;
+      pointer-events: none;
+      z-index: 0;
+      transform: translate3d(0, 0, 0);
+      will-change: transform;
+    }
+
+    .card > *:not(.hero-shape):not(.hero-ornament) {
+      position: relative;
+      z-index: 1;
     }
 
     .eyebrow {
@@ -117,13 +256,22 @@
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--accent-deep);
-      margin-bottom: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-ornament {
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 50% 50% 44% 56% / 52% 44% 56% 48%;
+      background: var(--aqua-taupe-glow);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+      margin-bottom: 1.5rem;
+      z-index: 0;
     }
 
     h1 {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-variation-settings: "opsz" 60;
+      font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+      font-weight: 600;
       font-size: clamp(2rem, 4vw + 1rem, 3.25rem);
       line-height: 1.1;
       letter-spacing: -0.02em;
@@ -146,9 +294,10 @@
       align-items: flex-start;
       padding: 1rem;
       border: 1px solid var(--rule);
-      border-radius: 8px;
-      background: #fff;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(252, 249, 245, 0.99), rgba(240, 231, 221, 0.96));
       margin-bottom: 1.25rem;
+      box-shadow: 0 10px 30px rgba(36, 49, 61, 0.04);
     }
 
     .preview-thumb {
@@ -157,7 +306,7 @@
       height: 72px;
       display: grid;
       place-items: center;
-      background: linear-gradient(180deg, #f7f4ef, #efe7db);
+      background: linear-gradient(180deg, var(--surface-strong), var(--paper-warm));
       border-radius: 6px;
       color: var(--accent-deep);
       font-weight: 600;
@@ -189,9 +338,15 @@
     .feature {
       border: 1px solid var(--rule);
       padding: 1rem;
-      border-radius: 8px;
-      background: #fff;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(252, 249, 245, 0.99), rgba(239, 229, 219, 0.96));
       margin-bottom: 1.25rem;
+      box-shadow: 0 10px 30px rgba(36, 49, 61, 0.04);
+    }
+
+    .feature-alt {
+      background: linear-gradient(180deg, rgba(252, 249, 245, 0.99), rgba(239, 229, 219, 0.96));
+      border-color: rgba(95, 114, 128, 0.24);
     }
 
     .feature p {
@@ -235,6 +390,7 @@
     .contact-email:hover,
     .contact-email:focus-visible {
       background-size: 100% 1px;
+      color: var(--accent-hover);
     }
 
     .contact-email:focus-visible {
@@ -269,15 +425,61 @@
 </head>
 
 <body>
+  <div class="background-dots" aria-hidden="true">
+    <span class="bg-dot bg-dot-1"></span>
+    <span class="bg-dot bg-dot-2"></span>
+    <span class="bg-dot bg-dot-3"></span>
+    <span class="bg-dot bg-dot-4"></span>
+    <span class="bg-dot bg-dot-5"></span>
+    <span class="bg-dot bg-dot-6"></span>
+    <span class="bg-dot bg-dot-7"></span>
+    <span class="bg-dot bg-dot-8"></span>
+    <span class="bg-dot bg-dot-9"></span>
+    <span class="bg-dot bg-dot-10"></span>
+    <span class="bg-dot bg-dot-11"></span>
+    <span class="bg-dot bg-dot-12"></span>
+    <span class="bg-dot bg-dot-13"></span>
+    <span class="bg-dot bg-dot-14"></span>
+    <span class="bg-dot bg-dot-15"></span>
+    <span class="bg-dot bg-dot-16"></span>
+    <span class="bg-dot bg-dot-17"></span>
+    <span class="bg-dot bg-dot-18"></span>
+    <span class="bg-dot bg-dot-19"></span>
+    <span class="bg-dot bg-dot-20"></span>
+    <span class="bg-dot bg-dot-21"></span>
+    <span class="bg-dot bg-dot-22"></span>
+  </div>
+
   <main>
     <article class="card">
       <p class="eyebrow reveal">Trauma-Informed Graphic Design Institute, LLC</p>
-      <h1 class="reveal">Trauma-informed graphic design for healthcare.</h1>
-      <p class="prose reveal">The Trauma-Informed Graphic Design Institute, LLC advances <strong>Trauma-Informed Graphic Design</strong> as a field of research and practice. We help clinics, hospitals, and mission-driven organizations close the gap between their built environments and the patient-facing materials inside them. Founded by Steve Brackenrich Jr. on graduate research at Kent State University that defined the field and named the <strong>design investment disparity</strong> it addresses.</p>
+      <div class="hero-shape reveal" aria-hidden="true"></div>
+      <div class="hero-ornament reveal" aria-hidden="true"></div>
+      <h1 class="reveal">Trauma-Informed Graphic Design Institute, LLC advances trauma-informed graphic design, grounded in research, accessibility, and real-world practice.</h1>
+      <p class="prose reveal">Trauma-Informed Graphic Design Institute, LLC is dedicated to trauma-informed graphic design as a named academic and practice-based discipline focused on visual communication. In the TIGD framework, trauma-informed graphic design is not architecture, interior design, or UX in general; it is the application of trauma-informed principles to graphic design, with particular attention to typography, hierarchy, layout, readability, clarity, and the emotional impact of visual communication.</p>
 
-      <section class="feature reveal" role="region" aria-label="Feature announcement">
-        <p>I am proud to announce that today, July 1, 2026, I filed as an LLC in the State of Ohio, establishing the Trauma‑Informed Graphic Design Institute, LLC. My goal is to elevate the work of graphic design practitioners and interdisciplinary collaborators who are bridging the gap between trauma‑informed care and our discipline, and to help build an infrastructure of support to sustain that work. I invite you to join me in this effort.</p>
-        <p class="signature">Warm regards,<br>Steve</p>
+      <section class="feature reveal" role="region" aria-label="What TIGD Institute does">
+        <p><strong>What we do.</strong> The Institute offers consulting, visual auditing, educational support, and collaborative project work for mission-aligned organizations, researchers, and institutions. We help teams improve the readability, clarity, and emotional fit of materials used in high-stress settings and support public-facing communication that requires care, trust, and clarity.</p>
+      </section>
+
+      <section class="feature reveal" role="region" aria-label="Why the work matters">
+        <p><strong>Why it matters.</strong> Trauma-informed graphic design complements the work of trauma-informed designers and other practitioners, including social workers and allied professionals, by supporting the people and processes within a built environment through clear, accessible, and emotionally considerate visual communication. It also supports business, institutional, and operational functions that depend on readable and effective communication.</p>
+      </section>
+
+      <section class="feature feature-alt reveal" role="region" aria-label="Evidence and credibility">
+        <p><strong>Evidence and credibility.</strong> The Institute is grounded in published research, the thesis work that defined the field, and a commitment to review, quality assurance, and continuous improvement. The work is designed to be practical, accountable, and useful in real-world settings, with clear attention to stewardship and responsible practice.</p>
+      </section>
+
+      <section class="feature reveal" role="region" aria-label="Impact and outcomes">
+        <p><strong>Impact and outcomes.</strong> Clearer visual communication can reduce confusion, support comprehension, and help people engage with information with greater confidence in high-stress or high-stakes contexts.</p>
+      </section>
+
+      <section class="feature reveal" role="region" aria-label="Trauma-sensitive note">
+        <p><strong>Care and pacing.</strong> Because trauma-related work can be personally activating, visitors and collaborators are welcome to pause, step away, or return later if a section feels overwhelming. That caution applies across perspectives and backgrounds, because trauma affects people in many different ways and does not belong to any single identity, profession, or political position.</p>
+      </section>
+
+      <section class="feature reveal" role="region" aria-label="Collaboration and support">
+        <p><strong>Collaboration.</strong> TIGD Institute welcomes mission-aligned collaboration with universities, researchers, organizations, and individuals interested in ethical, evidence-informed communication and thoughtful partnership.</p>
       </section>
 
       <a class="preview-card reveal" href="http://rave.ohiolink.edu/etdc/view?acc_num=kent1777906546121583" target="_blank" rel="noopener noreferrer">
@@ -300,5 +502,30 @@
   <footer>
     © 2026 Trauma-Informed Graphic Design Institute, LLC
   </footer>
+
+  <script>
+    const heroShape = document.querySelector('.hero-shape');
+
+    if (heroShape && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+      let ticking = false;
+
+      const updateParallax = () => {
+        const scrollY = window.scrollY;
+        const offset = Math.min(140, scrollY * 0.7);
+        heroShape.style.transform = `translate3d(0, ${offset}px, 0)`;
+        ticking = false;
+      };
+
+      const onScroll = () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateParallax);
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      updateParallax();
+    }
+  </script>
 </body>
 </html>
